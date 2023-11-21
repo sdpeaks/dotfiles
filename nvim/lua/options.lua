@@ -1,46 +1,42 @@
-local opts = {
-    number = true,                                                    -- Line numbers
-    mouse = 'a',                                                      -- Enable mouse
-    ignorecase = true,                                                -- Case insensitive searching UNLESS /C or capital in search
-    smartcase = true,                                                 -- Smart case
-    hlsearch = false,                                                 -- Highlight search
-    wrap = false,                                                     -- Disable line wrap
-    breakindent = true,                                               -- Enable break indent
-    tabstop = 4,                                                      -- Number of spaces tabs count for
-    shiftwidth = 4,                                                   -- Number of spaces to use for auto indent
-    expandtab = true,                                                 -- Use spaces instead of tabs
-    termguicolors = true,                                             -- Use 24-bit colors
-    showmode = false,                                                 -- Don't show mode
-    cursorline = true,                                                -- Highlight current line
-    relativenumber = true,                                            -- Relative line numbers
-    shiftround = true,                                                -- Round indent
-    smartindent = true,                                               -- Insert indents automatically
-    whichwrap = "b,s,<,>,h,l,[,]",                                    -- Backspace and cursor keys wrap too
-    fillchars = { eob = " " },                                        -- Hide ~ at end of buffer
-    autowrite = true,                                                 -- Enable auto write
-    completeopt = "menu,menuone,noselect",                            -- Set completeopt to have a better completion experience
-    conceallevel = 3,                                                 -- Hide * markup for bold and italic
-    confirm = false,                                                  -- Confirm to save changes before exiting modified buffer
-    formatoptions = "jcroqlnt",                                       -- Auto format options
-    grepformat = "%f:%l:%c:%m",                                       -- Add custom `grepformat`
-    grepprg = "rg --vimgrep",                                         -- Add custom `grepprg`
-    inccommand = "nosplit",                                           -- preview incremental substitute
-    laststatus = 0,                                                   -- Disable statusline over
-    pumblend = 10,                                                    -- Popup blend
-    pumheight = 10,                                                   -- Maximum number of entries in a popup
-    scrolloff = 6,                                                    -- Lines of context
-    sessionoptions = { "buffers", "curdir", "tabpages", ",winsize" }, -- Add custom `sessionoptions`
-    sidescrolloff = 2,                                                -- Columns of context
-    signcolumn = "yes",                                               -- Always show the signcolumn, otherwise it would shift the text each time
-    spelllang = { "en" },                                             -- Spell checking language
-    splitbelow = true,                                                -- Put new windows below current
-    splitright = true,                                                -- Put new windows right of current
-    timeoutlen = 300,                                                 -- By default timeoutlen is 1000 ms
-    undofile = true,                                                  -- Enable persistent undo
-    undolevels = 10000,                                               -- Number of undo levels
-    wildmode = "longest:full,full",                                   -- Command-line completion mode
-}
-
-for k, v in pairs(opts) do
-    vim.opt[k] = v
-end
+vim.opt.number = true                                                    -- Line numbers
+vim.opt.mouse = 'a'                                                      -- Enable mouse
+vim.opt.ignorecase = true                                                -- Case insensitive searching UNLESS /C or capital in search
+vim.opt.smartcase = true                                                 -- Smart case
+vim.opt.hlsearch = false                                                 -- Highlight search
+vim.opt.wrap = false                                                     -- Disable line wrap
+vim.opt.breakindent = true                                               -- Enable break indent
+vim.opt.tabstop = 4                                                      -- Number of spaces tabs count for
+vim.opt.shiftwidth = 4                                                   -- Number of spaces to use for auto indent
+vim.opt.expandtab = true                                                 -- Use spaces instead of tabs
+vim.opt.termguicolors = true                                             -- Use 24-bit colors
+vim.opt.showmode = false                                                 -- Don't show mode
+vim.opt.cursorline = true                                                -- Highlight current line
+vim.opt.relativenumber = true                                            -- Relative line numbers
+vim.opt.shiftround = true                                                -- Round indent
+vim.opt.smartindent = true                                               -- Insert indents automatically
+vim.opt.whichwrap = "b,s,<,>,h,l,[,]"                                    -- Backspace and cursor keys wrap too
+vim.opt.fillchars = { eob = " " }                                        -- Hide ~ at end of buffer
+vim.opt.autowrite = true                                                 -- Enable auto write
+vim.opt.completeopt =
+"menu,menuone,noselect"                                                  -- Set completeopt to have a better completion experience
+vim.opt.conceallevel = 3                                                 -- Hide * markup for bold and italic
+vim.opt.confirm = false                                                  -- Confirm to save changes before exiting modified buffer
+vim.opt.formatoptions = "jcroqlnt"                                       -- Auto format options
+vim.opt.grepformat = "%f:%l:%c:%m"                                       -- Add custom `grepformat`
+vim.opt.grepprg = "rg --vimgrep"                                         -- Add custom `grepprg`
+vim.opt.inccommand = "nosplit"                                           -- preview incremental substitute
+vim.opt.laststatus = 0                                                   -- Disable statusline over
+vim.opt.pumblend = 10                                                    -- Popup blend
+vim.opt.pumheight = 10                                                   -- Maximum number of entries in a popup
+vim.opt.scrolloff = 6                                                    -- Lines of context
+vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", ",winsize" } -- Add custom `sessionoptions`
+vim.opt.sidescrolloff = 2                                                -- Columns of context
+vim.opt.signcolumn =
+"yes"                                                                    -- Always show the signcolumn, otherwise it would shift the text each time
+vim.opt.spelllang = { "en" }                                             -- Spell checking language
+vim.opt.splitbelow = true                                                -- Put new windows below current
+vim.opt.splitright = true                                                -- Put new windows right of current
+vim.opt.timeoutlen = 300                                                 -- By default timeoutlen is 1000 ms
+vim.opt.undofile = true                                                  -- Enable persistent undo
+vim.opt.undolevels = 10000                                               -- Number of undo levels
+vim.opt.wildmode = "longest:full,full"                                   -- Command-line completion mode
