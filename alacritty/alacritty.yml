@@ -1,0 +1,133 @@
+# Window Customization
+window:
+  opacity: 1
+  dimensions:
+    columns: 70
+    lines: 30
+  padding:
+    x: 6
+    y: 6
+  decorations: full #Still won't show in a window manger, but will in a desktop environment
+scrolling:
+  history: 10000
+  multiplier: 3
+window.dynamic_title: true
+
+# Font Customization
+font:
+  # normal:
+  #   family: JetBrainsMono Nerd Font
+  #   style: regular
+  # bold:
+  #   family: JetBrainsMono Nerd Font
+  #   style: bold 
+  # italic:
+  #   family: JetBrainsMono Nerd Font
+  #   style: Italic
+
+  normal:
+    family: CodeNewRoman Nerd Font
+    style: light
+  bold:
+    family: CodeNewRoman Nerd Font
+    style: bold 
+  italic:
+    family: CodeNewRoman Nerd Font
+    style: Italic
+  size: 13
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+  # debug:
+  #   persistent_logging: false
+draw_bold_text_with_bright_colors: true
+
+colors:
+    primary:
+        background: "#0e1214" # base
+        foreground: "#d0c6a5" # text
+        # Bright and dim foreground colors
+        dim_foreground: "#fb982e" # text
+        bright_foreground: "#d0c6a5" # text
+
+    # Cursor colors
+    cursor:
+        text: "#16181c" # base
+        cursor: "#d0c6a5" # rosewater
+    vi_mode_cursor:
+        text: "#16181c" # base
+        cursor: "#fb982e" # lavender
+
+    # Search colors
+    search:
+        matches:
+            foreground: "#16181c" # base
+            background: "#dd4e21" # subtext0
+        focused_match:
+            foreground: "#16181c" # base
+            background: "#ffd072" # green
+        footer_bar:
+            foreground: "#16181c" # base
+            background: "#dd4e21" # subtext0
+
+    # Keyboard regex hints
+    hints:
+        start:
+            foreground: "#0e1214" # base
+            background: "#d0c6a5" # yellow
+        end:
+            foreground: "#0e1214" # base
+            background: "#ffd072" # subtext0
+
+    # Selection colors
+    selection:
+        text: "#d0c6a5" # base
+        background: "#16181c" # rosewater
+
+    # Normal colors
+    normal:
+        black: "#16181c" # surface1
+        red: "#dc1c26" # red
+        green: "#9cd750" # green
+        yellow: "#52a260" # yellow
+        blue: "#fb982e" # blue
+        magenta: "#cd80b9" # pink
+        cyan: "#dd4e21" # teal
+        white: "#efead9" # subtext1
+
+    # Bright colors
+    bright:
+        black: "#efead9" # surface1
+        red: "#dc1c26" # red
+        green: "#9cd750" # green
+        yellow: "#52a260" # yellow
+        blue: "#fb982e" # blue
+        magenta: "#cd80b9" # pink
+        cyan: "#dd4e21" # teal
+        white: "#16181c" # subtext1
+
+    # # Dim colors
+    dim:
+        black: "#16181c" # surface1
+        red: "#dc1c26" # red
+        green: "#9cd750" # green
+        yellow: "#52a260" # yellow
+        blue: "#fb982e" # blue
+        magenta: "#cd80b9" # pink
+        cyan: "#dd4e21" # teal
+        white: "#efead9" # subtext1
+
+    indexed_colors:
+        - { index: 16, color: "#FAB387" }
+        - { index: 17, color: "#F5E0DC" }
+
+
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+    # blink-interval: 750
+    # unfocused_hollow: true

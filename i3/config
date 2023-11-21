@@ -1,0 +1,284 @@
+# ----------------------
+# I3 CONFIGURATION
+# ----------------------
+
+# Modifier keys
+set $mod Mod4
+set $alt Mod1
+set $f9  Mod2
+
+
+# Screen Brightness
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl s +5%
+
+# Screen Shots
+bindsym Print exec flameshot gui
+
+# Audio and volume
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Auto start apps
+exec --no-startup-id dex-autostart --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id clipit
+
+# Set wallpaper with feh
+exec_always feh --bg-fill ~/Pictures/Wallpapers/rock8.jpg
+
+# Drag floating windows
+floating_modifier $mod
+
+# ---------------------------------------
+# STYLE
+# ---------------------------------------
+
+smart_gaps off
+gaps inner 0
+gaps outer 0
+bindsym $mod+g gaps inner current toggle 10; gaps outer current toggle 5
+
+# Title font
+font pango:monospace 8
+
+# -------------------------------------
+# Start Apps
+# -------------------------------------
+
+# Desactivar pegar con rueda del mouserdrdrd
+# bindsym --release button2 nopaste
+
+# giro de rueda
+
+# Program launcher: dmenu
+# bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'monospace-10'"
+bindsym $mod+d exec rofi -show drun
+
+# Start a terminal
+# bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
+
+# ---- Shortcuts to apps ---------------
+
+# Close focused window
+bindsym $alt+Shift+q kill
+
+# --------------------------------------
+# Windows and workspaces movements
+# --------------------------------------
+
+# ----- windows ------------------------
+
+# touchpad click
+# exec xinput set-prop "DELL0AB4:00 27C6:0D43 Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput --set-prop 9 "libinput Natural Scrolling Enabled" 1
+
+# split vertical new window
+bindsym $mod+v split toggle
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+p focus parent
+
+# focus the child container
+bindsym $mod+c focus child
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout
+bindsym $Alt+Shift+l layout toggle all
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Resize windows function
+mode "resize" {
+        # hide bar
+        # mode hide
+        # hidden_state hide
+        # modifier none
+
+
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym l resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym j resize shrink height 5 px or 5 ppt
+        bindsym h resize grow width 5 px or 5 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# mouse focus
+focus_follows_mouse no
+
+# Container Colors ----------------------------------------------
+
+
+default_border pixel 1
+#new_window 1pixel
+#new_float normal
+#hide_edge_borders both
+#for_window [class="^.*"] border pixel 2
+
+# Paleta de colores
+# #ff7300
+# #E7411C
+# #EE952D
+
+
+# binding_mode       #e6411c #9c3a22 #ffffff
+
+# class                 border  bground text    indicator child_border
+# client.focused          #0e1214 #9c3a22 #FFFFFF #36c857   #4c4c4c
+client.focused          #0e1214 #9c3a22 #FFFFFF #ee952d   #444444
+client.focused_inactive #0e1214 #4C4C4C #0a0d0f #4C4C4C   #111111
+client.unfocused        #0e1214 #222222 #888888 #292D2E   #111111
+client.urgent           #0e1214 #DB3279 #FFFFFF #DB3279   #DB3279
+client.placeholder      #0e1214 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #0a0d0f
+
+# ------ workspaces ------------------------------
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+
+# ----------------------------------------------
+# I3 CONFIGURATION
+# ----------------------------------------------
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# session actions (reboot, close session, hibernate, off, etc)
+mode "power" {
+#   bindsym o exec --no-startup-id  i3exit poweroff, mode "default"
+#   bindsym s exec --no-startup-id i3exit suspend, mode "default"
+#   bindsym r exec --no-startup-id i3exit restart, mode "default"
+#   bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym o exec --no-startup-id systemclt poweroff; mode "default"
+    bindsym s exec --no-startup-id systemctl suspend; mode "dafault"
+    bindsym r exec --no-startup-id systemctl reboot; mode "default"
+    bindsym q exec --no-startup-id i3-msg exit; mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Shift+p mode "default"
+}
+bindsym $mod+Shift+p mode "power"
+
+mode "barview" {
+    bindsym j bar mode dock; mode "default"
+    bindsym k bar mode invisible; mode "default"
+
+    bindsym $mod+b mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+b mode "barview"
+
+bar {
+    workspace_buttons yes
+	  status_command SCRIPT_DIR=~/.config/i3blocks/scripts/ i3blocks
+    position top
+    # mode hide
+    # hidden_state hide
+
+    i3bar_command i3bar --transparency
+    tray_output primary
+    font pango: DejaVu Sans 9
+    # font pango: CodeNewRoman Nerd Font 10
+
+    height 24
+    separator_symbol "|"
+
+    colors {
+        # background #0e0204
+        background #0c0f1110
+        
+
+        # background #05070800
+        statusline #d0c6a5
+        separator #404040
+        # separator #25262c
+
+        inactive_workspace #05070800 #05070800 #dddddd
+        # focused_workspace  #dd4e2100 #dd4e2160 #0e1214
+        focused_workspace  #0e121400 #fb982e #0e1214
+        active_workspace   #285577 #285577 #0e1214
+        # inactive_workspace #0e1214 #0e1214 #999999
+        urgent_workspace   #dc1c26 #dc1c26 #ffffff
+        binding_mode       #0e1214 #dd4e21 #0e1214
+    }
+}
