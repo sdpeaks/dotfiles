@@ -1,3 +1,5 @@
+-- OPTIONS
+
 vim.opt.number = true                                                    -- Line numbers
 vim.opt.mouse = 'a'                                                      -- Enable mouse
 vim.opt.ignorecase = true                                                -- Case insensitive searching UNLESS /C or capital in search
@@ -17,8 +19,7 @@ vim.opt.smartindent = true                                               -- Inse
 vim.opt.whichwrap = "b,s,<,>,h,l,[,]"                                    -- Backspace and cursor keys wrap too
 vim.opt.fillchars = { eob = " " }                                        -- Hide ~ at end of buffer
 vim.opt.autowrite = true                                                 -- Enable auto write
-vim.opt.completeopt =
-"menu,menuone,noselect"                                                  -- Set completeopt to have a better completion experience
+vim.opt.completeopt = "menu,menuone,noselect"                                                  -- Set completeopt to have a better completion experience
 vim.opt.conceallevel = 3                                                 -- Hide * markup for bold and italic
 vim.opt.confirm = false                                                  -- Confirm to save changes before exiting modified buffer
 vim.opt.formatoptions = "jcroqlnt"                                       -- Auto format options
@@ -29,10 +30,9 @@ vim.opt.laststatus = 0                                                   -- Disa
 vim.opt.pumblend = 10                                                    -- Popup blend
 vim.opt.pumheight = 10                                                   -- Maximum number of entries in a popup
 vim.opt.scrolloff = 6                                                    -- Lines of context
-vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", ",winsize" } -- Add custom `sessionoptions`
+vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" } -- Add custom `sessionoptions`
 vim.opt.sidescrolloff = 2                                                -- Columns of context
-vim.opt.signcolumn =
-"yes"                                                                    -- Always show the signcolumn, otherwise it would shift the text each time
+vim.opt.signcolumn = "yes"                                                                    -- Always show the signcolumn, otherwise it would shift the text each time
 vim.opt.spelllang = { "en" }                                             -- Spell checking language
 vim.opt.splitbelow = true                                                -- Put new windows below current
 vim.opt.splitright = true                                                -- Put new windows right of current
