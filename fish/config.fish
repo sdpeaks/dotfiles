@@ -22,7 +22,8 @@ alias py python
 alias h hx
 alias lg lazygit
 alias gtree "git log --graph --oneline --decorate --all"
-alias pg "sudo -i -u postgres"
+alias pg "sudo su postgres"
+alias docker podman
 # alias cd ""
 
 zoxide init fish | source

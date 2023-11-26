@@ -34,7 +34,7 @@ font:
   italic:
     family: CodeNewRoman Nerd Font
     style: Italic
-  size: 13
+  size: 12.5
   offset:
     x: 0
     y: 0
