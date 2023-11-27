@@ -1,12 +1,14 @@
+local utils = {}
+
 -- mapping function
-local function map(lhs, rhs, mode, opts)
-    local options = { noremap = true, silent = true }
+utils.map = function(lhs, rhs, mode, opts)
     mode = mode or "n"
 
     if opts then
         options = vim.tbl_extend("force", options, opts)
     end
 
-    vim.keymap.set(mode, lhs, rhs, options)
+    vim.keymap.set(lhs, rhs, mode, options)
 end
 
+return utils

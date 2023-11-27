@@ -1,17 +1,7 @@
--- mapping function
-local function map(lhs, rhs, mode, opts)
-    local options = { noremap = true, silent = true }
-    mode = mode or "n"
-
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
-
-    vim.keymap.set(mode, lhs, rhs, options)
-end
-
 -- leader
 vim.g.mapleader = " "
+
+local map = require "utils.map"
 
 -- autopairs
 -- map("(", "()<Esc>i", "i")
@@ -39,4 +29,3 @@ map("<leader>q", ":q<CR>", "n")
 
 -- Nvim tree
 map("<leader>e", ":NvimTreeToggle<CR>", "n")
-
