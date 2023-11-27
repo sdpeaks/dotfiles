@@ -13,8 +13,9 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-    spec = {
-        { import = "plugins.editor" },
-    }
-})
+-- list of plugins
+local plugins = {
+    {"dotsilas/darcubox-nvim"},
+}
+
+require("lazy").setup(plugins, require "plugins.configs.lazyconfig")

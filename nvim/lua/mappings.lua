@@ -1,3 +1,4 @@
+-- mapping function
 local function map(lhs, rhs, mode, opts)
     local options = { noremap = true, silent = true }
     mode = mode or "n"
@@ -9,12 +10,15 @@ local function map(lhs, rhs, mode, opts)
     vim.keymap.set(mode, lhs, rhs, options)
 end
 
+-- leader
+vim.g.mapleader = " "
+
 -- autopairs
-map("(", "()<Esc>i", "i")
-map("{", "{}<Esc>i", "i")
-map("[", "[]<Esc>i", "i")
-map('"', '""<Esc>i', "i")
-map("'", "''<Esc>i", "i")
+-- map("(", "()<Esc>i", "i")
+-- map("{", "{}<Esc>i", "i")
+-- map("[", "[]<Esc>i", "i")
+-- map('"', '""<Esc>i', "i")
+-- map("'", "''<Esc>i", "i")
 
 -- to normal mode from insert
 map("kj", "<Esc>", "i")
@@ -35,3 +39,4 @@ map("<leader>q", ":q<CR>", "n")
 
 -- Nvim tree
 map("<leader>e", ":NvimTreeToggle<CR>", "n")
+
