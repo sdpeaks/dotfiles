@@ -1,6 +1,6 @@
 -- =============================== SETTINGS ====================================
 
-local options = {
+local opts = {
   -- Basic
   number         = true,
   relativenumber = true,
@@ -11,8 +11,6 @@ local options = {
   smartcase      = true,
   incsearch      = true,
   gdefault       = true,
-
-  -- Display settings
   numberwidth    = 4,
   signcolumn     = "auto",
   scrolloff      = 2,
@@ -21,6 +19,7 @@ local options = {
   splitright     = true,
   statusline     = "%f%m%r%h%w%=%{&ff}%=%l,%v  %p%% ",
   title          = false,
+  whichwrap      = "b,h,l,s,<,>,[,],~",
 
   -- Text Display
   wrap           = false,
@@ -53,10 +52,9 @@ local options = {
   backup         = false,
   swapfile       = false,
   errorbells     = false,
-  timeoutlen     = 500,
 }
 
-for k, v in pairs(options) do
+for k, v in pairs(opts) do
   vim.opt[k] = v
 end
 
@@ -64,33 +62,34 @@ end
 
 vim.g.mapleader = " "
 
-local map = function(lhs, rhs, mode, opts)
-  mode = mode or "n"
-  if opts then options = vim.tbl_extend("force", options, opts) end
-  vim.keymap.set(mode, lhs, rhs, options)
+local function maps(mappings)
+  for _, mapping in ipairs(mappings) do
+    local lhs, rhs, mode, opts = unpack(mapping)
+
+    local options = vim.tbl_extend("force", {
+      noremap = true,
+      silent = true
+    }, opts or {})
+
+    vim.keymap.set(mode or "n", lhs, rhs, options)
+  end
 end
 
--- to normal mode from insert
-map("kj", "<Esc>", "i")
+maps({
 
--- start and end of line
-map("H", "^", "n")
-map("L", "$", "n")
+  -- save and quit
+  { "<leader>w", ":w<CR>" },
+  { "<leader>q", ":q<CR>" },
 
--- move current line / block with Alt-j/k similar to vscode.
-map("<A-j>", ":m .+1<CR>==", "n")
-map("<A-k>", ":m .-2<CR>==", "n")
-map("<A-j>", ":move '>+1<CR>gv-gv", "v")
-map("<A-k>", ":move '<-2<CR>gv-gv", "v")
+  -- exit insert/command mode
+  { "kj",        [[<Esc>:lua vim.g.select_mode = true<CR>]], { "i", "c" } },
 
--- save and quit
-map("<leader>w", ":w<CR>", "n")
-map("<leader>q", ":q<CR>", "n")
+})
 
--- Nvim tree
-map("<leader>e", ":NvimTreeToggle<CR>", "n")
 
--- =============================== COMMANDS ====================================
+
+
+-- ============================= AUTOCOMMANDS ==================================
 
 
 
@@ -114,8 +113,21 @@ vim.opt.rtp:prepend(lazypath)
 
 -- list of plugins
 local plugins = {
+
   -- colorscheme
   { "dotsilas/darcubox-nvim" },
+  { "catppuccin/nvim",       name = "catppuccin" },
+
+  -- which-key
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+  },
+
 }
 
 -- lazy configuration
@@ -128,12 +140,16 @@ require('darcubox').setup {
   options = {
     transparent = true,
     styles = {
-      comments = { italic = true },           -- italic
-      functions = { bold = true },            -- bold
+      comments = { italic = true },
+      functions = { bold = true },
       keywords = { italic = true },
-      types = { italic = true, bold = true }, -- italics and bold
+      types = { italic = true, bold = true },
     }
   }
 }
 
-vim.cmd "colorscheme darcubox"
+vim.cmd "colorscheme catppuccin"
+
+-- whick-key setup variables
+local wk = require("which-key")
+wk.register()

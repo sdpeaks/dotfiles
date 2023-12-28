@@ -29,7 +29,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id clipit
 
 # Set wallpaper with feh
-exec_always feh --bg-fill ~/Pictures/Wallpapers/rock8.jpg
+exec_always feh --bg-fill ~/Pictures/Wallpapers/dunesblur2.jpg
 
 # Drag floating windows
 floating_modifier $mod

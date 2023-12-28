@@ -1,4 +1,6 @@
 {
+  "catppuccin": { "branch": "main", "commit": "a2107df4379d66e72a36a89792603151cebec1bf" },
   "darcubox-nvim": { "branch": "main", "commit": "cba3bbd191f713decb6f79660ade428ef2d6ef50" },
-  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" }
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }
