@@ -1,5 +1,3 @@
-local map = require("utils.map").map
-
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
@@ -10,6 +8,6 @@ return {
   },
 
   config = function()
-    map('<leader>e', ':Neotree filesystem reveal right<CR>')
+    vim.keymap.set('n','<leader>e', ':Neotree filesystem reveal right<CR>' )
   end
 }

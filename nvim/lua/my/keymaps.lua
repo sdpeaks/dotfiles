@@ -1,9 +1,4 @@
-local map = require("utils.map").map
-
 -- shortcuts
-map("kj", "<Esc>", "i")
-map('<leader>q', ':q!<CR>')
-map('<leader>w', ':w<CR>')
-
--- neo-tree
-map('<leader>e', ':Neotree filesystem reveal right<CR>')
+vim.keymap.set('i', "kj", "<Esc>")
+vim.keymap.set('n', '<leader>q', ':q!<CR>')
+vim.keymap.set('n', '<leader>w', ':w<CR>')
