@@ -1,23 +1,8 @@
-require "settings"
-require "autocmds"
-require "bindings"
-require "plugins"
+local load = require("utils.load").module
 
--- colorscheme: darcubox
-require('darcubox').setup {
-  options = {
-    transparent = true,
-    styles = {
-      comments = { italic = true },
-      functions = { bold = true },
-      keywords = { italic = true },
-      types = { italic = true, bold = true },
-    }
-  }
-}
+load "my.settings"
+load "my.plugins"
+load "my.keymaps"
+load "my.commands"
 
-vim.cmd "colorscheme catppuccin"
-
--- whick-key setup variables
-local wk = require("which-key")
-wk.register()
+pcall(vim.cmd.colorscheme, "catppuccin")

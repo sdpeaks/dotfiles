@@ -1,0 +1,1 @@
+return { "dotsilas/darcubox-nvim" }
