@@ -1,7 +1,7 @@
 # Neovim
 
 ### TO-DO
-- [ ] Highlighting
+- [X] Highlighting
 - [ ] Autoindentation
 - [ ] Autoformating
 - [ ] Autocompletion
@@ -10,7 +10,7 @@
 - [X] Search
 - [ ] Git
 - [ ] LSP
-- [ ] File explorer
+- [X] File explorer
 - [ ] Depuration
 - [ ] Terminal
 - [ ] Snippets

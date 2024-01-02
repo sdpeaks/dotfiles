@@ -1,5 +1,5 @@
 -- globals
-vim.g.mapleader = " "
+vim.g.mapleader        = " "
 
 -- Basic
 vim.opt.number         = true
@@ -17,9 +17,11 @@ vim.opt.scrolloff      = 2
 vim.opt.showcmd        = true
 vim.opt.splitbelow     = true
 vim.opt.splitright     = true
+vim.opt.laststatus     = 3
 vim.opt.statusline     = "%f%m%r%h%w%=%{&ff}%=%l,%v  %p%% "
 vim.opt.title          = false
 vim.opt.whichwrap      = "b,h,l,s,<,>,[,],~"
+vim.opt.timeoutlen     = 350
 
 -- Display
 vim.opt.wrap           = false
