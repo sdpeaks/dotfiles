@@ -5,8 +5,7 @@ return {
 		null_ls.setup({
 			sources = {
 				-- lua
-				-- null_ls.builtins.code_actions.refactoring,
-				-- null_ls.builtins.diagnostics.luacheck,
+				null_ls.builtins.code_actions.refactoring,
 				null_ls.builtins.formatting.stylua,
 
 				-- javascript
@@ -25,12 +24,6 @@ return {
 				-- python
 				null_ls.builtins.diagnostics.flake8,
 				null_ls.builtins.formatting.black,
-
-				-- .net
-
-				-- others
-				null_ls.builtins.code_actions.refactoring,
-				null_ls.builtins.code_actions.gitsigns,
 			},
 		})
 

@@ -26,14 +26,14 @@ keybinds {
     pane clear-defaults=true {
         bind "Alt p" "Esc" "Ctrl {" { SwitchToMode "Normal"; }
 
-        bind "h" "Left" { MoveFocus "Left"; }
-        bind "l" "Right" { MoveFocus "Right"; }
-        bind "j" "Down" { MoveFocus "Down"; }
-        bind "k" "Up" { MoveFocus "Up"; }
+        bind "Alt h" "h" "Left" { MoveFocus "Left"; }
+        bind "Alt l" "l" "Right" { MoveFocus "Right"; }
+        bind "Alt j" "j" "Down" { MoveFocus "Down"; }
+        bind "Alt k" "k" "Up" { MoveFocus "Up"; }
         bind "p" { SwitchFocus; }
-        bind "n" { NewPane; SwitchToMode "Normal"; }
+        bind "n" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
-        bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
+        // bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
         bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
@@ -164,7 +164,8 @@ keybinds {
         bind "Alt u" { SwitchToMode "Locked"; }
 
         bind "Alt q" { Quit; }
-        bind "Alt n" { NewPane; }
+        bind "Alt n" { NewPane "Right" ; }
+        bind "Alt d" { NewPane "Down" ; }
         bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt j" "Alt Down" { MoveFocus "Down"; }
@@ -177,7 +178,7 @@ keybinds {
 
     shared_except "normal" "locked" {
         unbind "Ctrl g"
-        bind "Enter" "Esc" { SwitchToMode "Normal"; }
+        bind "Enter" "Esc" "Alt u" { SwitchToMode "Normal"; }
     }
 
     shared_except "pane" "locked" {
