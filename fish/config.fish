@@ -25,6 +25,7 @@ alias lg lazygit
 alias gtree "git log --graph --oneline --decorate --all"
 alias pg "sudo su postgres"
 alias docker podman
+alias fsi "dotnet fsi"
 
 zoxide init fish | source
 

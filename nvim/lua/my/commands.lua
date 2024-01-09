@@ -1,1 +1,1 @@
-print("hello from autocmds")
+-- print("hello from autocmds")

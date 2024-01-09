@@ -1,1 +1,1 @@
-return { "dotsilas/darcubox-nvim" }
+return { --[[ "dotsilas/darcubox-nvim" ]] }

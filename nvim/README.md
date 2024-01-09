@@ -6,16 +6,16 @@
 - [ ] Autoformating
 - [ ] Autocompletion
 - [ ] IA assitance
-- [ ] Tabs
+- [X] Tabs
 - [X] Search
 - [ ] Git
 - [ ] LSP
 - [X] File explorer
 - [ ] Depuration
-- [ ] Terminal
+- [X] Terminal
 - [ ] Snippets
 - [ ] Refactoring
-- [ ] Autoexecution
+- [ ] Run
 
 ## Languages
 - [ ] Python

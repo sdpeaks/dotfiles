@@ -15,26 +15,38 @@ window.dynamic_title: true
 
 # Font Customization
 font:
-  # normal:
-  #   family: JetBrainsMono Nerd Font
-  #   style: regular
-  # bold:
-  #   family: JetBrainsMono Nerd Font
-  #   style: bold 
-  # italic:
-  #   family: JetBrainsMono Nerd Font
-  #   style: Italic
-
   normal:
-    family: CodeNewRoman Nerd Font
-    style: light
+    family: JetBrainsMono Nerd Font
+    style: regular
   bold:
-    family: CodeNewRoman Nerd Font
+    family: JetBrainsMono Nerd Font
     style: bold 
   italic:
-    family: CodeNewRoman Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Italic
-  size: 12.5
+
+  # normal:
+  #   family: CodeNewRoman Nerd Font
+  #   style: light
+  # bold:
+  #   family: CodeNewRoman Nerd Font
+  #   style: bold 
+  # italic:
+  #   family: CodeNewRoman Nerd Font
+  #   style: Italic
+
+  # normal:
+  #   family: DejaVuSansM Nerd Font
+  #   style: light
+  # bold:
+  #   family: DejaVuSansM Nerd Font
+  #   style: bold 
+  # italic:
+  #   family: DejaVuSansM Nerd Font
+  #   style: Italic
+
+  size: 12
+  # size: 12.5
   offset:
     x: 0
     y: 0

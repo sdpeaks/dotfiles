@@ -113,7 +113,7 @@ keybinds {
     }
 
     renametab clear-defaults=true {
-        bind "Ctrl c" { SwitchToMode "Normal"; }
+        bind "Ctrl c" "Enter" { SwitchToMode "Normal"; }
         bind "Esc" "Ctrl {"{ UndoRenameTab; SwitchToMode "Tab"; }
     }
 

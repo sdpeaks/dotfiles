@@ -3,9 +3,13 @@ vim.keymap.set("i", "kj", "<Esc>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 
+-- ramap defaults
+-- vim.keymap.set("n", "<C-j>", ":join<CR>")
+
 -- buffers
-vim.keymap.set({ "n" }, "<leader>bb", ":bprev<CR>")
-vim.keymap.set({ "n" }, "<leader>bn", ":bnext<CR>")
+vim.keymap.set({ "n" }, "<S-j>", ":bprev<CR>")
+vim.keymap.set({ "n" }, "<S-k>", ":bnext<CR>")
+vim.keymap.set({ "n" }, "<leader>c", ":bd<CR>")
 
 -- comands
 vim.keymap.set("n", "<leader>.", ":Alpha<CR>")
@@ -16,7 +20,6 @@ vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 
-vim.keymap.set("n", "<C-S-l>", "<C-w>L")
-vim.keymap.set("n", "<C-S-h>", "<C-w>H")
-vim.keymap.set("n", "<C-S-j>", "<C-w>J")
-vim.keymap.set("n", "<C-S-k>", "<C-w>K")
+-- start and end of line
+vim.keymap.set({ "n", "v" }, "H", "^")
+vim.keymap.set({ "n", "v" }, "L", "$")
