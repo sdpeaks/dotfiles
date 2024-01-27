@@ -2,11 +2,11 @@
 window:
   opacity: 1
   dimensions:
-    columns: 70
-    lines: 30
+    columns: 90
+    lines: 25
   padding:
-    x: 6
-    y: 6
+    x: 1
+    y: 1
   decorations: full #Still won't show in a window manger, but will in a desktop environment
 scrolling:
   history: 10000
@@ -45,7 +45,7 @@ font:
   #   family: DejaVuSansM Nerd Font
   #   style: Italic
 
-  size: 12
+  size: 11.5
   # size: 12.5
   offset:
     x: 0

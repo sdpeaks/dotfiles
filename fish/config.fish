@@ -26,6 +26,7 @@ alias gtree "git log --graph --oneline --decorate --all"
 alias pg "sudo su postgres"
 alias docker podman
 alias fsi "dotnet fsi"
+alias n nvim
 
 zoxide init fish | source
 

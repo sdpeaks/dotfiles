@@ -15,7 +15,7 @@ return {
         }
 
         dashboard.section.buttons.val = {
-            dashboard.button("e", "⌨  > Edit New", ":ene <BAR> startinsert <CR>"),
+            dashboard.button("n", "⌨  > New", ":ene <BAR> startinsert <CR>"),
             dashboard.button("f", "🔍 > Find files", ":cd $HOME/src/ | Telescope find_files<CR>"),
             dashboard.button("r", "⌛ > Recent", ":Telescope oldfiles<CR>"),
             dashboard.button("c", "⚙  > Settings", ":e! $HOME/.config/nvim/lua/<CR>"),
