@@ -9,8 +9,8 @@ set -x PATH $PATH
 # --------------------
 # ALIAS
 # --------------------
-alias l "exa --icons --grid"
-alias ll "exa -lh --icons --no-user --no-filesize --no-time"
+alias l "eza --icons --grid"
+alias ll "eza -lh --icons --no-user --no-filesize --no-time"
 alias cat "bat --theme=gruvbox-dark"
 alias find fd
 alias ps procs
