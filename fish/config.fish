@@ -16,7 +16,7 @@ alias find fd
 alias ps procs
 alias c clear
 alias v lvim
-alias tree "exa --tree"
+alias tree "eza --tree"
 alias zll zellij
 alias md mkdir
 alias py python
