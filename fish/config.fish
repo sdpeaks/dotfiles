@@ -27,6 +27,7 @@ alias pg "sudo su postgres"
 alias docker podman
 alias fsi "dotnet fsi"
 alias n nvim
+alias pn pnpm
 
 zoxide init fish | source
 
