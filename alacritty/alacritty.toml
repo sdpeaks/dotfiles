@@ -117,10 +117,11 @@ multiplier = 3
 [window]
 decorations = "full"
 opacity = 0.95
+dynamic_padding = true
 
 [window.dimensions]
-columns = 90
-lines = 25
+columns = 110
+lines = 26
 
 [window.padding]
 x = 1
