@@ -30,6 +30,7 @@ exec --no-startup-id clipit
 
 # Set wallpaper with feh
 exec_always feh --bg-fill ~/Pictures/Wallpapers/dunes2.jpg
+# exec_always feh --bg-fill ~/Pictures/Wallpapers/lake4.jpg
 
 # Drag floating windows
 floating_modifier $mod
