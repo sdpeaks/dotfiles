@@ -2,6 +2,25 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+
+function fish_prompt
+
+  function formatted_prompt_pwd
+    set -l home ~
+    set -l pwd (string replace --regex "$home" '~' $PWD)
+    echo (prompt_pwd --full-length-dirs 1)| string replace --regex --all '/' '/'
+  end
+  
+  set -l git_info (fish_git_prompt)
+  echo (set_color yellow)""(set_color green)(formatted_prompt_pwd)(set_color blue)$git_info(set_color yellow) (basename "$VIRTUAL_ENV") 
+  echo (set_color yellow)"\$ "
+end
+
+function fish_right_prompt
+
+end
+
+
 set fish_greeting ""
 set -x EDITOR nvim
 set -x PATH $PATH 
