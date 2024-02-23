@@ -38,7 +38,7 @@ set --export PATH $BUN_INSTALL/bin $PATH
 # go bin
 set --export PATH $HOME/go/bin $PATH
 
-starship init fish | source
+# starship init fish | source
 
 
 # yazi navigation

@@ -29,8 +29,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id clipit
 
 # Set wallpaper with feh
+# exec_always feh --bg-fill ~/Pictures/Wallpapers/Mountains4.jpg
 exec_always feh --bg-fill ~/Pictures/Wallpapers/dunes2.jpg
-# exec_always feh --bg-fill ~/Pictures/Wallpapers/lake4.jpg
 
 # Drag floating windows
 floating_modifier $mod
@@ -63,7 +63,7 @@ bindsym $mod+w exec rofi -show window
 
 # Start a terminal
 # bindsym $mod+Return exec kitty
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec wezterm
 
 # ---- Shortcuts to apps ---------------
 
@@ -267,7 +267,7 @@ bar {
 
     colors {
         # background #0e0204
-        background #0c0f1110
+        background #0c0f1100
         
 
         # background #05070800
