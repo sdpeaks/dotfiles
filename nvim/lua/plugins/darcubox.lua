@@ -1,1 +1,0 @@
-return { --[[ "dotsilas/darcubox-nvim" ]] }
