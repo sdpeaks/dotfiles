@@ -35,6 +35,7 @@ blur_passes 2
 blur_radius 8
 layer_effects "waybar" "blur enable; corner_radius 15"
 layer_effects "panel" "blur enable; corner_radius 15"
+layer_effects "thunar" "blur enable; corner_radius 15"
 
 shadows off
 shadows_on_csd off
@@ -58,12 +59,11 @@ client.background       #0a0d0f
 
 set $gnome-schema org.gnome.desktop.interface
 
-
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'ShadeZ-DarK' 
-# gsettings set $gnome-schema icon-theme 'Your icon theme'
-# gsettings set $gnome-schema cursor-theme 'Your cursor Theme'
-# gsettings set $gnome-schema font-name 'Your font name'
+    gsettings set $gnome-schema gtk-theme 'ShadeZ-Dark' 
+    gsettings set $gnome-schema icon-theme 'ShadeZ-Dark' 
+    gsettings set $gnome-schema cursor-theme 'ShadeZ-Dark' 
+    gsettings set $gnome-schema font-name 'ShadeZ-Dark' 
 }
 
 # Notification Daemon
@@ -79,7 +79,7 @@ scratchpad_minimize disable
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/Pictures/wallpapers/giorgio-trovato-NrHN4lWkEh4-unsplash.jpg fill
+output * bg ~/Pictures/wallpapers/pexels-eberhardgross-2098428.jpg fill
 #
 # Example configuration:
 #
