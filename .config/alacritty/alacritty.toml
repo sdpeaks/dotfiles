@@ -9,85 +9,6 @@ import = [
 # program = "/usr/bin/zsh"
 program = "/usr/bin/fish"
 
-# [colors]
-# draw_bold_text_with_bright_colors = true
-#
-# [[colors.indexed_colors]]
-# color = "#FAB387"
-# index = 16
-#
-# [[colors.indexed_colors]]
-# color = "#F5E0DC"
-# index = 17
-#
-# [colors.bright]
-# black = "#efead9"
-# blue = "#fb982e"
-# cyan = "#dd4e21"
-# green = "#9cd750"
-# magenta = "#cd80b9"
-# red = "#dc1c26"
-# white = "#16181c"
-# yellow = "#52a260"
-#
-# [colors.cursor]
-# cursor = "#d0c6a5"
-# text = "#16181c"
-#
-# [colors.dim]
-# black = "#16181c"
-# blue = "#fb982e"
-# cyan = "#dd4e21"
-# green = "#9cd750"
-# magenta = "#cd80b9"
-# red = "#dc1c26"
-# white = "#efead9"
-# yellow = "#52a260"
-#
-# [colors.hints.end]
-# background = "#ffd072"
-# foreground = "#0e1214"
-#
-# [colors.hints.start]
-# background = "#d0c6a5"
-# foreground = "#0e1214"
-#
-# [colors.normal]
-# black = "#16181c"
-# blue = "#fb982e"
-# cyan = "#dd4e21"
-# green = "#9cd750"
-# magenta = "#cd80b9"
-# red = "#dc1c26"
-# white = "#efead9"
-# yellow = "#52a260"
-#
-# [colors.primary]
-# background = "#0e1214"
-# bright_foreground = "#d0c6a5"
-# dim_foreground = "#fb982e"
-# foreground = "#d0c6a5"
-#
-# [colors.search.focused_match]
-# background = "#ffd072"
-# foreground = "#16181c"
-#
-# # [colors.search.footer_bar]
-# # background = "#dd4e21"
-# # foreground = "#16181c"
-#
-# [colors.search.matches]
-# background = "#dd4e21"
-# foreground = "#16181c"
-#
-# [colors.selection]
-# background = "#16181c"
-# text = "#d0c6a5"
-#
-# [colors.vi_mode_cursor]
-# cursor = "#fb982e"
-# text = "#16181c"
-
 [cursor.style]
 blinking = "On"
 shape = "Beam"
@@ -124,7 +45,7 @@ multiplier = 3
 
 [window]
 decorations = "full"
-opacity = 0.85
+opacity =  0.85
 dynamic_padding = true
 
 [window.dimensions]
@@ -132,8 +53,8 @@ columns = 110
 lines = 26
 
 [window.padding]
-x = 1
-y = 1
+x = 5
+y = 5
 
 [env]
 term = "alacritty"
