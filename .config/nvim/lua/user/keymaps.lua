@@ -32,8 +32,8 @@ vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decreas
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- buffers
-vim.keymap.set("n", "<S-TAB>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-vim.keymap.set("n", "<TAB>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bb", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>c", "<cmd>bd!<cr>", { desc = "Close buffer" })
 
 -- Add undo break-points
@@ -45,5 +45,8 @@ vim.keymap.set("i", ";", ";<c-g>u")
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
--- fast line selection
-vim.keymap.set("n", "vv", "V")
+vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
+vim.keymap.set("t", "<C-Left>", "<C-\\><C-N><C-w>h")
+vim.keymap.set("t", "<C-Down>", "<C-\\><C-N><C-w>j")
+vim.keymap.set("t", "<C-Up>", "<C-\\><C-N><C-w>k")
+vim.keymap.set("t", "<C-Right>", "<C-\\><C-N><C-w>l")

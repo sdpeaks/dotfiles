@@ -25,16 +25,16 @@ return {
 
           -- Jump to the definition of the word under your cursor.
           --  To jump back, press <C-t>.
-          map("ld", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+          map("<leader>ld", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
-          map("lD", vim.lsp.buf.declaration, "Goto [D]eclaration")
+          map("<leader>lD", vim.lsp.buf.declaration, "Goto [D]eclaration")
 
           -- Find references for the word under your cursor.
-          map("lr", require("telescope.builtin").lsp_references, "Goto References")
+          map("<leader>lr", require("telescope.builtin").lsp_references, "Goto References")
 
           --  Useful when your language has ways of declaring types without an actual implementation.
-          map("lI", require("telescope.builtin").lsp_implementations, "Goto [I]mplementation")
+          map("<leader>lI", require("telescope.builtin").lsp_implementations, "Goto [I]mplementation")
 
           --  Useful when you're not sure what type a variable is and you want to see
           map("<leader>lt", require("telescope.builtin").lsp_type_definitions, "[T]ype Definition")
@@ -52,7 +52,7 @@ return {
           map("<leader>la", vim.lsp.buf.code_action, "Code [A]ction")
 
           -- Opens a popup that displays documentation about the word under your cursor
-          map("K", vim.lsp.buf.hover, "Hover Documentation")
+          map("<leader>K", vim.lsp.buf.hover, "Hover Documentation")
 
           -- The following two autocommands are used to highlight references of the word under your cursor
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
