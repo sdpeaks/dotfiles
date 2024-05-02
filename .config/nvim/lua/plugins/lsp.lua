@@ -25,34 +25,34 @@ return {
 
           -- Jump to the definition of the word under your cursor.
           --  To jump back, press <C-t>.
-          map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+          map("ld", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+
+          -- WARN: This is not Goto Definition, this is Goto Declaration.
+          map("lD", vim.lsp.buf.declaration, "Goto [D]eclaration")
 
           -- Find references for the word under your cursor.
-          map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+          map("lr", require("telescope.builtin").lsp_references, "Goto References")
 
           --  Useful when your language has ways of declaring types without an actual implementation.
-          map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
+          map("lI", require("telescope.builtin").lsp_implementations, "Goto [I]mplementation")
 
           --  Useful when you're not sure what type a variable is and you want to see
-          map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+          map("<leader>lt", require("telescope.builtin").lsp_type_definitions, "[T]ype Definition")
 
           -- Fuzzy find all the symbols in your current document.
-          map("<leader>lds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+          map("<leader>ls", require("telescope.builtin").lsp_document_symbols, "Document [s]ymbols")
 
           --  Similar to document symbols, except searches over your whole project.
-          map("<leader>lws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+          map("<leader>lS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 
           -- Rename the variable under your cursor
-          map("<leader>lr", vim.lsp.buf.rename, "[R]e[n]ame")
+          map("<leader>ln", vim.lsp.buf.rename, "Re[n]ame")
 
           -- Execute a code action, usually your cursor needs to be on top of an error
-          map("<leader>lca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+          map("<leader>la", vim.lsp.buf.code_action, "Code [A]ction")
 
           -- Opens a popup that displays documentation about the word under your cursor
           map("K", vim.lsp.buf.hover, "Hover Documentation")
-
-          -- WARN: This is not Goto Definition, this is Goto Declaration.
-          map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
           -- The following two autocommands are used to highlight references of the word under your cursor
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
@@ -81,7 +81,7 @@ return {
         gopls = {},
         pyright = {},
         tsserver = {},
-        csharp_ls = {},
+        -- csharp_ls = {},
         svelte = {},
         lua_ls = {
           -- cmd = {...},
