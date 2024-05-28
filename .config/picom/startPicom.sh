@@ -4,4 +4,4 @@ if ps -A | grep picom; then
 fi
 
 # Iniciar Picom
-picom --experimental-backends --config ~/.config/picom/picom.config 
+# picom --experimental-backends --config ~/.config/picom/picom.config 

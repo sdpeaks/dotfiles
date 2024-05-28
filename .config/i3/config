@@ -5,7 +5,7 @@
 # Modifier keys
 set $mod Mod4
 set $alt Mod1
-set $f9  Mod2
+# set $f9  Mod2 ****
 
 # remap caps-lock
 exec --no-startup-idxmodmap -e "remove lock = Caps_Lock"
@@ -30,11 +30,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 exec --no-startup-id dex-autostart --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id clipit
+# exec --no-startup-id clipit
 
 # Set wallpaper with feh
-# exec_always feh --bg-fill ~/Pictures/Wallpapers/Mountains4.jpg
-exec_always feh --bg-fill ~/Pictures/wallpapers/pexels-eberhardgross-2098428.jpg
+exec_always feh --bg-fill ~/Pictures/wallpapers/mateusz-klein-a1BlhTu0lMI-unsplash.jpg
 
 # Drag floating windows
 floating_modifier $mod
@@ -62,16 +61,17 @@ font pango:monospace 8
 
 # Program launcher: dmenu
 # bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'monospace-10'"
+# bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'monospace-10'"
 bindsym $mod+d exec rofi -show drun
 
 # Start a terminal
-bindsym $mod+Return exec alacritty 
-bindsym $mod+w exec librewolf
+bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec i3-sensible-terminal
 
 # ---- Shortcuts to apps ---------------
 
 # Close focused window
-bindsym $alt+Shift+q kill
+bindsym $mod+Shift+q kill
 
 # --------------------------------------
 # Windows and workspaces movements
@@ -80,8 +80,8 @@ bindsym $alt+Shift+q kill
 # ----- windows ------------------------
 
 # touchpad click
-# exec xinput set-prop "DELL0AB4:00 27C6:0D43 Touchpad" "libinput Tapping Enabled" 1
-exec --no-startup-id xinput --set-prop 9 "libinput Natural Scrolling Enabled" 1
+exec xinput set-prop "DELL0AB4:00 27C6:0D43 Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1
 
 # split vertical new window
 bindsym $mod+v split toggle
@@ -215,6 +215,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# Multiple screen
+workspace "0" output HDMI-A-0
 
 # ----------------------------------------------
 # I3 CONFIGURATION
@@ -228,11 +230,11 @@ bindsym $mod+Shift+r restart
 
 # session actions (reboot, close session, hibernate, off, etc)
 mode "power" {
-#   bindsym o exec --no-startup-id  i3exit poweroff, mode "default"
+  # bindsym o exec --no-startup-id  i3exit poweroff
 #   bindsym s exec --no-startup-id i3exit suspend, mode "default"
 #   bindsym r exec --no-startup-id i3exit restart, mode "default"
 #   bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym o exec --no-startup-id systemclt poweroff; mode "default"
+    bindsym o exec --no-startup-id systemclt poweroff
     bindsym s exec --no-startup-id systemctl suspend; mode "dafault"
     bindsym r exec --no-startup-id systemctl reboot; mode "default"
     bindsym q exec --no-startup-id i3-msg exit; mode "default"
@@ -255,34 +257,18 @@ mode "barview" {
 bindsym $mod+b mode "barview"
 
 bar {
-    workspace_buttons yes
-	  status_command SCRIPT_DIR=~/.config/i3blocks/scripts/ i3blocks
-    position top
+  colors {
+    background #000000
+    statusline #FFFFFF
+    separator  #666666
 
-    i3bar_command i3bar --transparency
-    tray_output primary
-    font pango: DejaVu Sans 9
-    # font pango: CodeNewRoman Nerd Font 10
-
-    height 20
-    separator_symbol "|"
-
-    colors {
-        # background #0e0204
-        background #0c0f1100
-        
-
-        # background #05070800
-        statusline #d0c6a5
-        separator #404040
-        # separator #25262c
-
-        inactive_workspace #05070800 #05070800 #dddddd
-        # focused_workspace  #dd4e2100 #dd4e2160 #0e1214
-        focused_workspace  #0e121400 #fb982e #0e1214
-        active_workspace   #285577 #285577 #0e1214
-        # inactive_workspace #0e1214 #0e1214 #999999
-        urgent_workspace   #dc1c26 #dc1c26 #ffffff
-        binding_mode       #0e1214 #dd4e21 #0e1214
-    }
+    focused_workspace  #83CAFA #51A2DA #FFFFFF
+    active_workspace   #3C6EB4 #294172 #FFFFFF
+    inactive_workspace #8C8C8C #4C4C4C #888888
+    urgent_workspace   #EC69A0 #DB3279 #FFFFFF
+    binding_mode       #b691d3 #A07CBC #FFFFFF
+  }
+  status_command i3status
+  position top
 }
+

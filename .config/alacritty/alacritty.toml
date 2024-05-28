@@ -8,6 +8,7 @@ import = [
 [shell]
 # program = "/usr/bin/zsh"
 program = "/usr/bin/fish"
+# program = "/usr/bin/bash"
 
 [cursor.style]
 blinking = "On"
@@ -45,7 +46,7 @@ multiplier = 3
 
 [window]
 decorations = "full"
-opacity =  0.85
+opacity =  0.80
 dynamic_padding = true
 
 [window.dimensions]
