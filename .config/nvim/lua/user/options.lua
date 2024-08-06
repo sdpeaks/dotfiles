@@ -13,6 +13,8 @@ vim.g.netrw_banner = 0
 -- options
 --
 local option = {
+  statuscolumn = "%s %=%{v:relnum?v:relnum:v:lnum} %C ",
+  numberwidth = 2,
   number = true,
   relativenumber = true,
   clipboard = "unnamedplus",
@@ -23,7 +25,7 @@ local option = {
   scrolloff = 5,
   shiftwidth = 2,
   showmatch = true,
-  signcolumn = "yes",
+  signcolumn = "yes:1",
   foldcolumn = "1",
   smartcase = true,
   smartindent = true,
@@ -32,8 +34,8 @@ local option = {
   swapfile = false,
   tabstop = 2,
   wrap = false,
-  updatetime = 250,
-  timeoutlen = 500,
+  updatetime = 200,
+  timeoutlen = 250,
   foldenable = false,
   laststatus = 3,
   showtabline = 2,

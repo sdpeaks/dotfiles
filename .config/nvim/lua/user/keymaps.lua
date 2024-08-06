@@ -1,6 +1,9 @@
 -- open file explorer
 -- vim.keymap.set("n", "<leader>e", "<cmd>25Lex<cr>", {desc = "File Explorer"})
 
+-- exit insert mode
+vim.keymap.set("i", "kj", "<ESC>")
+
 -- lazygit
 vim.keymap.set("n", "<leader>tg", ":LazyGit<cr>")
 
