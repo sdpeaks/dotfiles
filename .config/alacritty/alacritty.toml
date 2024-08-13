@@ -50,8 +50,8 @@ opacity =  0.80
 dynamic_padding = true
 
 [window.dimensions]
-columns = 110
-lines = 26
+columns = 120
+lines = 35
 
 [window.padding]
 x = 5
