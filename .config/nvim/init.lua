@@ -8,4 +8,5 @@ if dev then
   vim.opt.runtimepath:append("/home/silas/src/darcubox-nvim")
 end
 
+vim.g.zig_fmt_autosave = 0
 vim.cmd.colorscheme("darcubox")

@@ -38,7 +38,7 @@ local option = {
   timeoutlen = 250,
   foldenable = false,
   laststatus = 3,
-  showtabline = 2,
+  -- showtabline = 2,
 }
 
 for k, v in pairs(option) do
