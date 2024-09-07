@@ -23,7 +23,7 @@ y = 0
 
 [font.offset]
 x = 0
-y = 4
+y = 3
 
 [font.bold]
 style = "bold"
@@ -54,7 +54,7 @@ dynamic_padding = true
 
 [window.dimensions]
 columns = 120
-lines = 35
+lines = 30
 
 [window.padding]
 x = 5
