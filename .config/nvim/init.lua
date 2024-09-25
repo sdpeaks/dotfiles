@@ -1,6 +1,7 @@
 local dev = false
 
-require("core")
+require("config")
+
 if dev then
   -- darcubox-nvim
   vim.opt.runtimepath:append("$HOME/projects/public/darcubox-nvim")
