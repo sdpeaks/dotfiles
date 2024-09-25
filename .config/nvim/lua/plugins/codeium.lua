@@ -1,6 +1,6 @@
 return {
   "Exafunction/codeium.vim",
-  event = "BufEnter",
+  event = "InsertEnter",
   -- config = function()
   --   require("codeium").setup({})
   --   -- vim.g.codeium_enabled = false
