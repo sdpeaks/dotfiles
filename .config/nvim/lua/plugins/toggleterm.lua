@@ -4,7 +4,7 @@ return {
     version = "*",
     config = function()
       require("toggleterm").setup({
-        open_mapping = "<leader>tt",
+        open_mapping = "<M-2>",
         direction = "float",
         insert_mappings = false, -- whether or not the open mapping applies in insert mode
       })

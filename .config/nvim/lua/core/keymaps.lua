@@ -1,11 +1,8 @@
--- open file explorer
--- vim.keymap.set("n", "<leader>e", "<cmd>25Lex<cr>", {desc = "File Explorer"})
-
 -- exit insert mode
 vim.keymap.set("i", "kj", "<ESC>")
-
--- lazygit
-vim.keymap.set("n", "<leader>tg", ":LazyGit<cr>")
+-- vim.keymap.set("i", "jk", "<ESC>")
+-- vim.keymap.set("i", "kk", "<ESC>")
+-- vim.keymap.set("i", "jj", "<ESC>")
 
 -- clear highlight search
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
@@ -35,8 +32,8 @@ vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decreas
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- buffers
-vim.keymap.set("n", "<leader>bb", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "gp", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+vim.keymap.set("n", "gn", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>c", "<cmd>bd!<cr>", { desc = "Close buffer" })
 
 -- Add undo break-points
@@ -48,8 +45,12 @@ vim.keymap.set("i", ";", ";<c-g>u")
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+-- terminal movement
 vim.keymap.set("t", "<esc>", "<C-\\><C-N>")
 vim.keymap.set("t", "<C-Left>", "<C-\\><C-N><C-w>h")
 vim.keymap.set("t", "<C-Down>", "<C-\\><C-N><C-w>j")
 vim.keymap.set("t", "<C-Up>", "<C-\\><C-N><C-w>k")
 vim.keymap.set("t", "<C-Right>", "<C-\\><C-N><C-w>l")
+
+-- recent file
+-- vim.api.nvim_set_keymap("n", "<leader><leader>", "<cmd>b#<CR>", { noremap = true, silent = true })

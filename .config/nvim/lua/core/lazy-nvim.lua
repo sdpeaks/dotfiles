@@ -1,9 +1,4 @@
---
--- plugin manager
---
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -14,17 +9,15 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " "
+local lazy = require("lazy")
 
-require("lazy").setup("plugins", {
+lazy.setup({
+  spec = {
+    { import = "plugins" },
+  },
   change_detection = {
-    enabled = true,
     notify = false,
-  },
-  ui = {
-    border = "rounded",
-  },
+  }
 })

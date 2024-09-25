@@ -1,4 +1,21 @@
 return {
+  -- lazygit
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+    }
+  },
 
   -- gitsigns
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
@@ -12,19 +29,5 @@ return {
         changedelete = { text = "┃" },
       },
     },
-  },
-
-  -- lazygit
-  "kdheepak/lazygit.nvim",
-  cmd = {
-    "LazyGit",
-    "LazyGitConfig",
-    "LazyGitCurrentFile",
-    "LazyGitFilter",
-    "LazyGitFilterCurrentFile",
-  },
-  -- optional for floating window border decoration
-  dependencies = {
-    "nvim-lua/plenary.nvim",
   },
 }
