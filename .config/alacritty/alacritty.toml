@@ -15,7 +15,7 @@ blinking = "On"
 shape = "Beam"
 
 [font]
-size = 10.5
+size = 9.5
 
 [font.glyph_offset]
 x = 0
@@ -27,20 +27,20 @@ y = 3
 
 [font.bold]
 style = "bold"
-# family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 # family = "MesloLGSDZ Nerd Font"
-family = "SFMono Nerd Font"
+# family = "SFMono Nerd Font"
 
 [font.italic]
-# family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 # family = "MesloLGSDZ Nerd Font"
-family = "SFMono Nerd Font"
+# family = "SFMono Nerd Font"
 style = "italic"
 
 [font.normal]
-# family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 # family = "MesloLGSDZ Nerd Font"
-family = "SFMono Nerd Font"
+# family = "SFMono Nerd Font"
 style = "normal"
 
 [scrolling]
