@@ -9,6 +9,17 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- indentation go
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  callback = function()
+    vim.bo.tabstop = 4 -- 1 tab = 4 spaces
+    vim.bo.shiftwidth = 4 -- indentation width
+    vim.bo.softtabstop = 4 -- number of spaces in tab when editing
+    vim.bo.expandtab = false -- use true tabs
+  end,
+})
+
 -- remember cursor position
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "*",

@@ -36,5 +36,4 @@ vim.opt.fillchars = {
   foldsep = " ",
 }
 
-vim.opt.statuscolumn = "%s%=%{v:virtnum == 0 ? (v:relnum == 0 ? v:lnum : v:relnum) : ''} %C "
--- vim.o.statuscolumn = "%s%=%{v:relnum?v:relnum:v:lnum} %C "
+vim.opt.statuscolumn = " %s%=%{v:virtnum == 0 ? (v:relnum == 0 ? v:lnum : v:relnum) : ''} %C "

@@ -52,5 +52,7 @@ vim.keymap.set("t", "<C-Down>", "<C-\\><C-N><C-w>j")
 vim.keymap.set("t", "<C-Up>", "<C-\\><C-N><C-w>k")
 vim.keymap.set("t", "<C-Right>", "<C-\\><C-N><C-w>l")
 
+vim.keymap.set("n", "<S><S>", ":lua print('hello world')", { desc = "Print hello world" })
+
 -- recent file
 -- vim.api.nvim_set_keymap("n", "<leader><leader>", "<cmd>b#<CR>", { noremap = true, silent = true })

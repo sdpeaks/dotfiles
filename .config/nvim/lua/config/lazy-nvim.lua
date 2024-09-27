@@ -15,7 +15,8 @@ local lazy = require("lazy")
 
 lazy.setup({
   spec = {
-    { import = "plugins" },
+    { import = "plugins.base" },
+    { import = "plugins.langs" },
   },
   change_detection = {
     notify = false,
